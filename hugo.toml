@@ -1,0 +1,4 @@
+baseURL = 'https://madhavm.com/'
+languageCode = 'en-us'
+title = 'Madhav Mathur'
+theme = 'ananke'
