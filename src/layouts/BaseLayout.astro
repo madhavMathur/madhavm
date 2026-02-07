@@ -1,10 +1,14 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
 }
 
 const { title, description = 'Personal website of Madhav M' } = Astro.props;
+const siteUrl = Astro.site?.toString() ?? 'https://madhavm.com';
+const canonical = new URL(Astro.url.pathname, siteUrl).toString();
 ---
 <!doctype html>
 <html lang="en">
@@ -12,19 +16,31 @@ const { title, description = 'Personal website of Madhav M' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b3b59" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a class="brand" href="/">madhavm.com</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/blog">Blog</a>
+          <a href="/#contact">Contact</a>
+        </div>
       </nav>
     </header>
-    <main>
+    <main class="site-main">
       <slot />
     </main>
+    <footer class="site-footer">
+      <p>Built with Astro. Deployed via Cloudflare Pages.</p>
+    </footer>
   </body>
 </html>

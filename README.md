@@ -1,32 +1,57 @@
 # madhavm.com
 
-Personal website project for [madhavm.com](https://madhavm.com), rebuilt with Astro in this existing repository.
+Personal website for [madhavm.com](https://madhavm.com), built with Astro.
 
-## Stack
+## What This Repo Includes
+- Landing page and blog pages in `src/pages/`
+- Shared layout and styling system in `src/layouts/` and `src/styles/`
+- Agent onboarding instructions in `AGENTS.md`
+- Deployment wiring for Cloudflare Pages
 
-- Astro
-- Static site output suitable for deployment to any static host
-
-## Local development
-
+## Quick Start
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:4321`.
+Then open `http://localhost:4321`.
 
-## Build and preview
-
+## Daily Workflow
+1. Edit pages/components in `src/`
+2. Validate before commit:
 ```bash
-npm run build
-npm run preview
+npm run verify
+```
+3. Commit and push to `main`
+4. Confirm production after deploy:
+```bash
+npm run check:live
 ```
 
-Production build output is generated in `dist/`.
+Cloudflare Pages is connected to this repo and deploys automatically on push to `main`.
 
-## Deployment
+## Utility Commands
+- `npm run dev`: local dev server
+- `npm run build`: production build into `dist/`
+- `npm run check`: Astro checks + build
+- `npm run verify`: wrapper for check/build verification
+- `npm run check:live`: production smoke check (`/`, `/blog`, sample post)
+- `npm run new:post -- "Title"`: scaffold blog post markdown file
+- `npm run deploy`: manual Cloudflare Pages deploy via wrangler
 
-1. Run `npm run build`.
-2. Deploy the `dist/` directory to your host (for example: Vercel, Netlify, Cloudflare Pages, or GitHub Pages).
-3. Point your `madhavm.com` domain to that host.
+## Agent Onboarding
+- Start with `/Users/madhav/Documents/madhavm/AGENTS.md`
+- Extra operational notes: `/Users/madhav/Documents/madhavm/docs/REPO_GUIDE.md`
+
+## Project Structure
+- `src/pages/index.astro`: home page
+- `src/pages/blog/index.astro`: blog index
+- `src/pages/blog/*.md`: blog posts
+- `src/layouts/BaseLayout.astro`: shared HTML shell + metadata
+- `src/styles/global.css`: design tokens and global styles
+- `public/`: static assets
+
+## Deploy Notes
+- Primary deploy path: Cloudflare Git integration on push to `main`
+- No GitHub Actions deploy pipeline is required
+- Secondary/manual path: `npm run deploy` (requires Cloudflare auth env vars)

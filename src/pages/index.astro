@@ -1,8 +1,87 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="madhavm.com" description="Personal website and blog for Madhav M">
-  <h1>Madhav M</h1>
-  <p>Welcome to my personal website.</p>
-  <p><a href="/blog">Read the blog</a></p>
+<BaseLayout
+  title="Madhav Mathur | madhavm.com"
+  description="Software Engineer. Writing about software, systems, and practical execution."
+>
+  <section class="home-hero">
+    <p class="kicker">Madhav Mathur</p>
+    <h1>Software Engineer</h1>
+    <p class="intro">
+      I build practical software and write about what I learn along the way.
+      This site is focused on writing, build notes, and engineering lessons from real work.
+    </p>
+    <div class="inline-links" aria-label="Primary links">
+      <a href="/blog">Blog</a>
+      <a href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </div>
+  </section>
+
+  <section class="home-block" aria-label="Writing">
+    <h2>Writing</h2>
+    <p>Start with the latest post:</p>
+    <p><a href="/blog/hello-world">Hello World</a></p>
+  </section>
+
+  <section class="home-block" id="contact" aria-label="Contact">
+    <h2>Contact</h2>
+    <p>Send a message directly from this form. It opens your email client.</p>
+
+    <form id="contact-form" class="contact-form">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Open email draft</button>
+      <p class="fine-print">
+        The draft includes basic context like page URL, referrer, browser, timezone, and timestamp.
+      </p>
+    </form>
+  </section>
 </BaseLayout>
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  if (form instanceof HTMLFormElement) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const data = new FormData(form);
+      const name = (data.get('name') ?? '').toString().trim();
+      const email = (data.get('email') ?? '').toString().trim();
+      const message = (data.get('message') ?? '').toString().trim();
+
+      const subject = `[madhavm.com] Website inquiry from ${name || 'visitor'}`;
+      const metadata = [
+        `Source URL: ${window.location.href}`,
+        `Referrer: ${document.referrer || 'direct'}`,
+        `Browser: ${navigator.userAgent}`,
+        `Timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone || 'unknown'}`,
+        `Language: ${navigator.language || 'unknown'}`,
+        `Screen: ${window.screen.width}x${window.screen.height}`,
+        `Timestamp: ${new Date().toISOString()}`,
+      ];
+
+      const body = [
+        `Name: ${name || 'Not provided'}`,
+        `Email: ${email || 'Not provided'}`,
+        '',
+        message,
+        '',
+        '--- Context ---',
+        ...metadata,
+      ].join('\n');
+
+      const mailto = `mailto:madhavmathur@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+  }
+</script>
