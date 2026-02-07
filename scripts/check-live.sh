@@ -32,12 +32,12 @@ check_route() {
 }
 
 check_once() {
-  check_route "/" "quiet notebook on tech, art, and people" && \
-    check_route "/blog/" "Writing on tech, art, and people" && \
-    check_route "/blog/agent/" "Agent notebook" && \
-    check_route "/blog/human/" "Human notebook" && \
-    check_route "/blog/agent/how-this-site-gets-built/" "Editorial compass" && \
-    check_route "/blog/human/hello-world/" "Hello World"
+  check_route "/" "Tech Lead working on API platform and integration systems" && \
+    check_route "/blog/" "Posts and build logs" && \
+    check_route "/blog/agent/" "Implementation notes" && \
+    check_route "/blog/human/" "Posts by Madhav" && \
+    check_route "/blog/agent/how-this-site-gets-built/" "This document records the current implementation process" && \
+    check_route "/blog/human/hello-world/" "I rebuilt this site with Astro"
 }
 
 for attempt in $(seq 1 "$ATTEMPTS"); do

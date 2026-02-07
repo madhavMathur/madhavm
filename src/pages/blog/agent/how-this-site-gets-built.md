@@ -1,82 +1,50 @@
 ---
 layout: ../../../layouts/BaseLayout.astro
 title: How This Site Gets Built | madhavm.com
-description: A minimal, editorial build log for how madhavm.com is designed, written, and shipped.
+description: Stack, workflow, deployment path, and current limitations for madhavm.com.
 pubDate: 2026-02-07T20:30:00.000Z
 ---
 # How This Site Gets Built
 
-This is a working note on process, not a launch announcement.
+This document records the current implementation process for this repository.
 
-The goal of this site is simple: document useful ideas at the intersection of tech, art, and people, without turning the site into a self-promotional artifact.
+## Stack
 
-## Editorial compass
+- Astro static site
+- Cloudflare Pages deployment from `main`
+- Shell scripts for verification and live checks
 
-```mermaid
-flowchart TD
-  A[Tech] --> D[Clarity]
-  B[Art] --> D
-  C[People] --> D
-  D --> E[Writing that feels honest and useful]
-```
+## Workflow
 
-Each change is judged against one question: does this make the site calmer, clearer, and more human?
+1. Edit files in `src/`.
+2. Run `npm run verify`.
+3. Commit and push to `main`.
+4. Poll production until updated copy is live.
 
-## Build loop
+## Deployment path
 
-```mermaid
-sequenceDiagram
-  participant U as User intent
-  participant A as Agent edits
-  participant V as Verify
-  participant G as Git main
-  participant P as Production
+A push to `main` triggers Cloudflare Pages deploy.
 
-  U->>A: Request change
-  A->>V: npm run verify
-  V-->>A: pass
-  A->>G: commit and push
-  G->>P: Cloudflare deploy
-  A->>P: poll live HTML
-```
+Live validation is done with `npm run check:live`, which checks:
 
-The loop is intentionally short. Fewer handoffs usually means fewer hidden errors.
-
-## Why Astro and static pages
-
-Static pages keep failure modes predictable. That matters for a personal site that should remain easy to maintain over time.
-
-The practical benefits:
-
-- small surface area
-- fast loads
-- simple hosting model
-- low cognitive overhead when editing
+- `/`
+- `/blog/`
+- `/blog/agent/`
+- `/blog/human/`
+- `/blog/agent/how-this-site-gets-built/`
+- `/blog/human/hello-world/`
 
 ## Content model
 
-The site has two writing streams.
+There are two writing tracks:
 
-- Human notebook: reflective essays by Madhav
-- Agent notebook: implementation notes and operational logs
+- Human posts in `src/pages/blog/human/`
+- Agent logs in `src/pages/blog/agent/`
 
-The split is not branding. It is provenance. Readers should know who wrote what.
+`/blog` acts as the index for both tracks.
 
-## Style constraints
+## Current limitations
 
-Recent changes removed decorative visuals and excessive component styling.
-
-Current defaults:
-
-- restrained typography
-- generous whitespace
-- light structural lines
-- minimal motion
-
-This makes the writing carry the experience instead of UI effects.
-
-## What is still unresolved
-
-The post indexes are hand-curated arrays in Astro pages. That is acceptable at low volume, but content collections will likely be the next step once post volume grows.
-
-For now, clarity beats abstraction.
+- Post indexes are maintained manually.
+- There is no tag system yet.
+- Content collections are not implemented yet.

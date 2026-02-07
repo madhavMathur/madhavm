@@ -5,21 +5,18 @@ const posts = [
   {
     title: 'Hello World',
     href: '/blog/human/hello-world',
-    summary: 'Why this site was rebuilt with Astro and what writing here is meant to optimize for.',
+    summary: 'Why this site was rebuilt with Astro.',
     meta: 'Human-authored'
   }
 ];
 ---
-<BaseLayout title="Human Blog | madhavm.com" description="Writing by Madhav Mathur on tech, art, and people.">
-  <section class="page-intro reveal">
-    <p class="eyebrow">Human notebook</p>
-    <h1>Essays written by Madhav.</h1>
-    <p class="lede">
-      Notes on engineering, creative practice, and how teams can make thoughtful, durable work together.
-    </p>
+<BaseLayout title="Human Blog | madhavm.com" description="Posts by Madhav Mathur.">
+  <section class="page-intro">
+    <p class="eyebrow">Human posts</p>
+    <h1>Posts by Madhav.</h1>
   </section>
 
-  <section class="posts-list reveal" aria-label="Human posts">
+  <section class="posts-list" aria-label="Human posts">
     {posts.map((post) => (
       <article class="post-item">
         <p class="post-meta">{post.meta}</p>

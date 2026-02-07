@@ -16,7 +16,7 @@ const canonical = new URL(Astro.url.pathname, siteUrl).toString();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f7f4ee" />
+    <meta name="theme-color" content="#0f1115" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -28,12 +28,9 @@ const canonical = new URL(Astro.url.pathname, siteUrl).toString();
   <body>
     <header class="site-header">
       <nav class="site-nav">
-        <a class="brand" href="/">
-          <span class="brand-mark">MM</span>
-          <span class="brand-name">Madhav Mathur</span>
-        </a>
+        <a class="brand" href="/">Madhav Mathur</a>
         <div class="nav-links">
-          <a href="/">Home</a>
+          <a href="/">About</a>
           <a href="/blog">Writing</a>
           <a href="/#contact">Contact</a>
         </div>

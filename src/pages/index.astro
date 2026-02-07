@@ -3,57 +3,40 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="Madhav Mathur | madhavm.com"
-  description="A quiet notebook on tech, art, and people."
+  description="Madhav Mathur: Tech Lead for API platform and integrations in New York City."
 >
   <section class="hero">
-    <p class="eyebrow">Madhav Mathur · New York City</p>
-    <h1>A quiet notebook on tech, art, and people.</h1>
-    <p class="lede">
-      I work in platform engineering, and I am most curious about how technical systems shape creative work,
-      collaboration, and everyday human experience.
-    </p>
-    <div class="hero-links">
-      <a class="inline-link" href="/blog">Read writing</a>
-      <a class="inline-link" href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="inline-link" href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
+    <figure class="profile-photo" aria-label="Portrait">
+      <img src="/images/profile.jpg" alt="Portrait of Madhav Mathur" loading="eager" decoding="async" />
+    </figure>
+    <div class="hero-copy">
+      <p class="eyebrow">New York City</p>
+      <h1>Tech Lead working on API platform and integration systems.</h1>
+      <p class="lede">I lead API Platform and Integrations at TheGuarantors.</p>
+      <p class="body-copy">Previously: Amazon (payments and chargebacks), Bentley Systems (platform tooling).</p>
+      <p class="body-copy">Education: Cornell M.Eng. Computer Science, UC San Diego B.S. Computer Science.</p>
+      <p class="body-copy">
+        Links:
+        <a class="inline-link" href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>,
+        <a class="inline-link" href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>,
+        <a class="inline-link" href="/blog">Writing</a>
+      </p>
     </div>
   </section>
 
-  <section class="section reveal" aria-label="Curiosities">
-    <p class="section-kicker">Curiosities</p>
-    <div class="curiosity-grid">
-      <article class="curiosity-card">
-        <h2>Tech</h2>
-        <p>Reliable systems, clear APIs, and the small engineering choices that make teams calmer and faster.</p>
-      </article>
-      <article class="curiosity-card">
-        <h2>Art</h2>
-        <p>Visual composition, writing craft, and why good design often comes from restraint, not decoration.</p>
-      </article>
-      <article class="curiosity-card">
-        <h2>People</h2>
-        <p>Communication, trust, and the social architecture behind teams that consistently do good work.</p>
-      </article>
-    </div>
+  <section class="section" aria-label="Interests">
+    <p class="section-kicker">Interests</p>
+    <ul class="facts-list">
+      <li><strong>Tech:</strong> API contracts, backend reliability, and platform architecture.</li>
+      <li><strong>Art:</strong> visual composition, architecture, and writing craft.</li>
+      <li><strong>People:</strong> communication patterns and team operating systems.</li>
+    </ul>
   </section>
 
-  <section class="section reveal" aria-label="Work context">
-    <p class="section-kicker">Work</p>
-    <p class="body-copy">
-      I currently lead API Platform and Integrations at TheGuarantors. Previously, I worked on backend systems at
-      Amazon and Bentley Systems.
-    </p>
-    <p class="body-copy">
-      This website is less a highlight reel and more a working journal: what I am learning, what I am building,
-      and what I am still trying to understand.
-    </p>
-  </section>
-
-  <section class="section reveal" id="contact" aria-label="Contact">
+  <section class="section" id="contact" aria-label="Contact">
     <p class="section-kicker">Contact</p>
     <p class="body-copy">
-      If you are exploring thoughtful problems at the intersection of software, design, and people,
-      <a id="contact-mailto" class="inline-link" href="mailto:madhavmathur@outlook.com?subject=Website%20inquiry%20from%20madhavm.com">email me</a>.
+      <a id="contact-mailto" class="inline-link" href="mailto:madhavmathur@outlook.com?subject=Website%20inquiry%20from%20madhavm.com">Email</a>
     </p>
   </section>
 </BaseLayout>

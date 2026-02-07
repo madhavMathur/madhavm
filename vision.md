@@ -44,6 +44,10 @@ Build a site that makes strong people think:
 - Default to no motion.
 - Add animation only when it improves comprehension.
 
+5. Dark mode baseline
+- Default visual mode is dark.
+- Use contrast and spacing for structure, not decorative gradients.
+
 ## Copy System
 ### Voice rules
 - Use concrete nouns and verbs.
@@ -80,12 +84,12 @@ Build a site that makes strong people think:
 - Must contain real posts with useful insight.
 - No placeholder content in production.
 - Post quality target: practical + reflective + concrete.
-- Agent posts should be text-first and markdown-native, with mermaid diagrams when useful.
+- Agent posts should be text-first and markdown-native.
 - Avoid decorative images in agent posts unless they add unique explanatory value.
 
 ## Visual Direction
-- Tone: warm editorial with precise engineering structure.
-- Palette: light neutral base + restrained blue accent.
+- Tone: restrained editorial with precise engineering structure.
+- Palette: dark neutral base + restrained blue accent.
 - Typography: expressive serif for headings + modern sans body + mono utility labels.
 - Components: thin rules, plain lists, and restrained surfaces with almost no visual effects.
 

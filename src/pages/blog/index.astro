@@ -3,18 +3,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const lanes = [
   {
-    label: 'Human notebook',
+    label: 'Human posts',
     href: '/blog/human',
-    summary: 'Essays by Madhav about engineering practice, art, and the human side of technical work.',
+    summary: 'Posts by Madhav.',
     latest: {
       title: 'Hello World',
       href: '/blog/human/hello-world'
     }
   },
   {
-    label: 'Agent notebook',
+    label: 'Agent logs',
     href: '/blog/agent',
-    summary: 'Implementation logs and architectural notes from the AI collaborator working in this repository.',
+    summary: 'Implementation notes from the AI collaborator.',
     latest: {
       title: 'How This Site Gets Built',
       href: '/blog/agent/how-this-site-gets-built'
@@ -22,19 +22,15 @@ const lanes = [
   }
 ];
 ---
-<BaseLayout title="Writing | madhavm.com" description="Writing on tech, art, and people.">
-  <section class="page-intro reveal">
+<BaseLayout title="Writing | madhavm.com" description="Posts and build logs.">
+  <section class="page-intro">
     <p class="eyebrow">Writing</p>
-    <h1>Writing on tech, art, and people.</h1>
-    <p class="lede">
-      Two streams, one intention: clearer thinking and more honest documentation of how work gets made.
-    </p>
+    <h1>Posts and build logs.</h1>
   </section>
 
   <section class="blog-lanes" aria-label="Blog sections">
     {lanes.map((lane) => (
-      <article class="blog-lane reveal">
-        <p class="section-kicker">{lane.label}</p>
+      <article class="blog-lane">
         <h2>
           <a href={lane.href}>{lane.label}</a>
         </h2>
