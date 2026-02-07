@@ -3,69 +3,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="Madhav Mathur | madhavm.com"
-  description="Madhav Mathur: Software Engineer at TheGuarantors, leading API and Integrations teams in New York City."
+  description="Madhav Mathur in New York, leading API and Integrations work at TheGuarantors."
 >
   <section class="hero">
-    <figure class="hero-skyline" aria-label="Midtown Manhattan night skyline">
-      <img src="/images/nyc-night-skyline.jpg" alt="Midtown Manhattan skyline at night" loading="eager" decoding="async" />
-    </figure>
-
-    <div class="hero-main">
-      <figure class="profile-photo" aria-label="Portrait">
-        <img src="/images/profile.jpg" alt="Portrait of Madhav Mathur" loading="eager" decoding="async" />
+    <div class="hero-stage">
+      <figure class="hero-skyline" aria-hidden="true">
+        <img src="/images/nyc-night-skyline.jpg" alt="" loading="eager" decoding="async" />
       </figure>
 
-      <div class="hero-copy">
-        <p class="eyebrow">New York City</p>
-        <p class="lede">
-          Currently working as a Software Engineer at
-          <a class="inline-link" href="https://www.theguarantors.com/" target="_blank" rel="noreferrer">TheGuarantors</a>,
-          leading their API and Integrations teams.
-        </p>
+      <div class="hero-main">
+        <figure class="profile-photo" aria-label="Portrait">
+          <img src="/images/profile.jpg" alt="Portrait of Madhav Mathur" loading="eager" decoding="async" />
+        </figure>
+
+        <div class="hero-copy">
+          <p class="eyebrow">New York City</p>
+          <p class="hero-name">Madhav Mathur</p>
+          <p class="lede">
+            I lead API and integrations at
+            <a class="inline-link" href="https://www.theguarantors.com/" target="_blank" rel="noreferrer">TheGuarantors</a>.
+            I use this site to publish essays and implementation notes on how systems behave under real constraints.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Experience">
-    <h2>Experience</h2>
-    <ul class="detail-list">
-      <li>
-        <p class="detail-title">
-          <a class="inline-link" href="https://www.theguarantors.com/" target="_blank" rel="noreferrer">TheGuarantors</a>
-        </p>
-        <p class="detail-copy">Software Engineer, leading API and Integrations teams.</p>
-      </li>
-      <li>
-        <p class="detail-title">
-          <a class="inline-link" href="https://www.amazon.com/" target="_blank" rel="noreferrer">Amazon</a>
-        </p>
-        <p class="detail-copy">Payments, risk, and fraud prevention.</p>
-      </li>
-      <li>
-        <p class="detail-title">
-          <a class="inline-link" href="https://www.bentley.com/" target="_blank" rel="noreferrer">Bentley Systems</a>
-        </p>
-        <p class="detail-copy">3D digital twins for infrastructure projects.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="section" aria-label="Education">
-    <h2>Education</h2>
-    <ul class="detail-list">
-      <li>
-        <p class="detail-title">
-          <a class="inline-link" href="https://www.ucsd.edu/" target="_blank" rel="noreferrer">UC San Diego</a>
-        </p>
-        <p class="detail-copy">Computer Science and Economics.</p>
-      </li>
-      <li>
-        <p class="detail-title">
-          <a class="inline-link" href="https://www.cornell.edu/" target="_blank" rel="noreferrer">Cornell University</a>
-        </p>
-        <p class="detail-copy">Computer Science.</p>
-      </li>
-    </ul>
+  <section class="section intro-bio" aria-label="Introduction">
+    <h2>Introduction</h2>
+    <p class="body-copy">
+      I am based in New York and lead APIs and integrations at
+      <a class="inline-link" href="https://www.theguarantors.com/" target="_blank" rel="noreferrer">TheGuarantors</a>.
+      Before that, at
+      <a class="inline-link" href="https://www.amazon.com/" target="_blank" rel="noreferrer">Amazon</a>
+      and
+      <a class="inline-link" href="https://www.bentley.com/" target="_blank" rel="noreferrer">Bentley Systems</a>,
+      I worked on payments, risk, and internal tooling.
+    </p>
+    <p class="body-copy">
+      I studied at
+      <a class="inline-link" href="https://cse.ucsd.edu/" target="_blank" rel="noreferrer">UC San Diego</a>
+      and
+      <a class="inline-link" href="https://www.cs.cornell.edu/" target="_blank" rel="noreferrer">Cornell</a>.
+      My approach is simple: define terms carefully, make tradeoffs explicit, and prefer clear writing over broad
+      claims.
+    </p>
+    <p class="body-copy">
+      This site has two writing tracks. The
+      <a class="inline-link" href="/blog/human">Human Blog</a>
+      is for essays after I have had time to test an idea in practice. The
+      <a class="inline-link" href="/blog/agent">Agent Blog</a>
+      is a running record of repository changes: what changed, why it changed, and how it was checked.
+    </p>
   </section>
 
   <section class="section" id="contact" aria-label="Contact">

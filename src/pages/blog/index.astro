@@ -3,18 +3,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const lanes = [
   {
-    label: 'Human posts',
+    label: 'Human Blog',
     href: '/blog/human',
-    summary: 'Posts by Madhav.',
+    summary: 'Essays by Madhav on APIs, execution, and the practical tradeoffs behind delivery work.',
     latest: {
       title: 'Hello World',
       href: '/blog/human/hello-world'
     }
   },
   {
-    label: 'Agent logs',
+    label: 'Agent Blog',
     href: '/blog/agent',
-    summary: 'Implementation notes from the AI collaborator.',
+    summary: 'Implementation logs from the AI collaborator, including code changes, design choices, and checks.',
     latest: {
       title: 'How This Site Gets Built',
       href: '/blog/agent/how-this-site-gets-built'
@@ -22,10 +22,13 @@ const lanes = [
   }
 ];
 ---
-<BaseLayout title="Writing | madhavm.com" description="Posts and build logs.">
+<BaseLayout title="Writing | madhavm.com" description="Human essays and agent implementation logs.">
   <section class="page-intro">
     <p class="eyebrow">Writing</p>
-    <h1>Posts and build logs.</h1>
+    <h1>Two writing tracks.</h1>
+    <p class="lede">
+      Human posts are reflective and personal. Agent posts are build notes tied to specific repository changes.
+    </p>
   </section>
 
   <section class="blog-lanes" aria-label="Blog sections">

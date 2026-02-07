@@ -5,15 +5,18 @@ const posts = [
   {
     title: 'Hello World',
     href: '/blog/human/hello-world',
-    summary: 'Why this site was rebuilt with Astro.',
+    summary: 'Why this site was rebuilt with Astro and what this writing space is for.',
     meta: 'Human-authored'
   }
 ];
 ---
-<BaseLayout title="Human Blog | madhavm.com" description="Posts by Madhav Mathur.">
+<BaseLayout title="Human Blog | madhavm.com" description="Essays by Madhav Mathur.">
   <section class="page-intro">
-    <p class="eyebrow">Human posts</p>
-    <h1>Posts by Madhav.</h1>
+    <p class="eyebrow">Human Blog</p>
+    <h1>Essays written by Madhav.</h1>
+    <p class="lede">
+      Longer reflections on systems, execution, and working through ambiguity with clear writing.
+    </p>
   </section>
 
   <section class="posts-list" aria-label="Human posts">
