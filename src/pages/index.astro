@@ -3,86 +3,58 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="Madhav Mathur | madhavm.com"
-  description="Tech Lead building API platforms, integrations, and pragmatic software teams."
+  description="A quiet notebook on tech, art, and people."
 >
   <section class="hero">
-    <div class="hero-copy reveal">
-      <p class="eyebrow">New York City</p>
-      <h1>Engineering platforms with rigor, taste, and momentum.</h1>
-      <p class="lede">
-        I lead API Platform and Integrations at TheGuarantors. I enjoy building systems that are technically reliable
-        and easy for people to understand, operate, and extend.
-      </p>
-      <div class="hero-actions">
-        <a class="button-primary" href="/blog">Read writing</a>
-        <a class="button-secondary" href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="button-secondary" href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
+    <p class="eyebrow">Madhav Mathur · New York City</p>
+    <h1>A quiet notebook on tech, art, and people.</h1>
+    <p class="lede">
+      I work in platform engineering, and I am most curious about how technical systems shape creative work,
+      collaboration, and everyday human experience.
+    </p>
+    <div class="hero-links">
+      <a class="inline-link" href="/blog">Read writing</a>
+      <a class="inline-link" href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="inline-link" href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
     </div>
-    <figure class="hero-portrait reveal" aria-label="Portrait">
-      <img src="/images/profile.jpg" alt="Portrait of Madhav Mathur" loading="eager" decoding="async" />
-    </figure>
   </section>
 
-  <section class="section reveal" aria-label="Selected work">
-    <div class="section-header">
-      <p class="section-kicker">Selected work</p>
-      <h2>Real systems, real constraints, durable outcomes.</h2>
-    </div>
-    <div class="work-grid">
-      <article class="work-card">
-        <p class="work-time">Now</p>
-        <h3>
-          <a href="https://www.theguarantors.com/" target="_blank" rel="noreferrer">TheGuarantors</a>
-        </h3>
-        <p>Tech Lead for API Platform and Integrations. Focused on partner velocity, interface quality, and reliability.</p>
+  <section class="section reveal" aria-label="Curiosities">
+    <p class="section-kicker">Curiosities</p>
+    <div class="curiosity-grid">
+      <article class="curiosity-card">
+        <h2>Tech</h2>
+        <p>Reliable systems, clear APIs, and the small engineering choices that make teams calmer and faster.</p>
       </article>
-      <article class="work-card">
-        <p class="work-time">Previously</p>
-        <h3>
-          <a href="https://www.amazon.com/" target="_blank" rel="noreferrer">Amazon</a>
-        </h3>
-        <p>Software Development Engineer on payments and chargeback systems, building backend workflows at large scale.</p>
+      <article class="curiosity-card">
+        <h2>Art</h2>
+        <p>Visual composition, writing craft, and why good design often comes from restraint, not decoration.</p>
       </article>
-      <article class="work-card">
-        <p class="work-time">Earlier</p>
-        <h3>
-          <a href="https://www.bentley.com/" target="_blank" rel="noreferrer">Bentley Systems</a>
-        </h3>
-        <p>Built platform services and internal developer tooling to speed up teams shipping customer-facing products.</p>
+      <article class="curiosity-card">
+        <h2>People</h2>
+        <p>Communication, trust, and the social architecture behind teams that consistently do good work.</p>
       </article>
     </div>
   </section>
 
-  <section class="section split reveal">
-    <article class="panel">
-      <p class="section-kicker">How I work</p>
-      <h2>Systems thinking with product empathy.</h2>
-      <p>
-        I care about architecture, but I also care about whether the architecture makes life easier for engineers,
-        product teams, and customers.
-      </p>
-      <p>
-        Most of my work sits at the boundary of backend reliability, API design, and execution discipline: good docs,
-        clean contracts, and fewer surprises in production.
-      </p>
-    </article>
-    <article class="panel">
-      <p class="section-kicker">Education + context</p>
-      <ul class="plain-list">
-        <li>M.Eng. Computer Science, Cornell University</li>
-        <li>B.S. Computer Science, UC San Diego</li>
-      </ul>
-      <p class="small-note">
-        Outside engineering, I am drawn to writing, architecture, and design craft. This site is where those threads meet.
-      </p>
-    </article>
+  <section class="section reveal" aria-label="Work context">
+    <p class="section-kicker">Work</p>
+    <p class="body-copy">
+      I currently lead API Platform and Integrations at TheGuarantors. Previously, I worked on backend systems at
+      Amazon and Bentley Systems.
+    </p>
+    <p class="body-copy">
+      This website is less a highlight reel and more a working journal: what I am learning, what I am building,
+      and what I am still trying to understand.
+    </p>
   </section>
 
-  <section class="contact-band reveal" id="contact">
+  <section class="section reveal" id="contact" aria-label="Contact">
     <p class="section-kicker">Contact</p>
-    <h2>If you're building something ambitious, I'd love to hear about it.</h2>
-    <a id="contact-mailto" class="button-primary" href="mailto:madhavmathur@outlook.com?subject=Website%20inquiry%20from%20madhavm.com">Email me</a>
+    <p class="body-copy">
+      If you are exploring thoughtful problems at the intersection of software, design, and people,
+      <a id="contact-mailto" class="inline-link" href="mailto:madhavmathur@outlook.com?subject=Website%20inquiry%20from%20madhavm.com">email me</a>.
+    </p>
   </section>
 </BaseLayout>
 

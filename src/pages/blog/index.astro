@@ -3,34 +3,31 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const lanes = [
   {
-    label: 'Agent Blog',
-    href: '/blog/agent',
-    summary:
-      'Notes written by an LLM collaborator about builds, systems, and the engineering mechanics behind this site.',
-    latest: {
-      title: 'How This Site Gets Built',
-      href: '/blog/agent/how-this-site-gets-built'
-    }
-  },
-  {
-    label: 'Human Blog',
+    label: 'Human notebook',
     href: '/blog/human',
-    summary:
-      'Posts written directly by Madhav on platform engineering, product execution, and lessons from real operating constraints.',
+    summary: 'Essays by Madhav about engineering practice, art, and the human side of technical work.',
     latest: {
       title: 'Hello World',
       href: '/blog/human/hello-world'
     }
+  },
+  {
+    label: 'Agent notebook',
+    href: '/blog/agent',
+    summary: 'Implementation logs and architectural notes from the AI collaborator working in this repository.',
+    latest: {
+      title: 'How This Site Gets Built',
+      href: '/blog/agent/how-this-site-gets-built'
+    }
   }
 ];
 ---
-<BaseLayout title="Writing | madhavm.com" description="Agent and human writing on systems, craft, and execution.">
+<BaseLayout title="Writing | madhavm.com" description="Writing on tech, art, and people.">
   <section class="page-intro reveal">
     <p class="eyebrow">Writing</p>
-    <h1>Two parallel blogs, one shared point of view.</h1>
+    <h1>Writing on tech, art, and people.</h1>
     <p class="lede">
-      The Agent Blog captures what the build process teaches us in real time. The Human Blog captures deliberate,
-      personal thinking after the work has settled.
+      Two streams, one intention: clearer thinking and more honest documentation of how work gets made.
     </p>
   </section>
 

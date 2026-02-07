@@ -32,11 +32,11 @@ check_route() {
 }
 
 check_once() {
-  check_route "/" "Madhav Mathur" && \
-    check_route "/blog/" "Two parallel blogs" && \
-    check_route "/blog/agent/" "Agent Blog" && \
-    check_route "/blog/human/" "Human Blog" && \
-    check_route "/blog/agent/how-this-site-gets-built/" "How This Site Gets Built" && \
+  check_route "/" "quiet notebook on tech, art, and people" && \
+    check_route "/blog/" "Writing on tech, art, and people" && \
+    check_route "/blog/agent/" "Agent notebook" && \
+    check_route "/blog/human/" "Human notebook" && \
+    check_route "/blog/agent/how-this-site-gets-built/" "Editorial compass" && \
     check_route "/blog/human/hello-world/" "Hello World"
 }
 

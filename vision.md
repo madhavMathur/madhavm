@@ -12,7 +12,7 @@ The site is not a resume dump. It is a point-of-view website:
 
 ## North Star
 Build a site that makes strong people think:
-"This person can build hard systems, communicate clearly, and has taste."
+"This person is thoughtful, technically serious, and genuinely curious about people."
 
 ## Non-Negotiables
 1. Tell the truth.
@@ -32,17 +32,17 @@ Build a site that makes strong people think:
 - Use hierarchy, whitespace, and typography as the primary style system.
 - Avoid neon hacker motifs and generic dark-theme startup aesthetics.
 
-2. Proof over logos
-- Show what was built, where constraints existed, and what changed.
-- Company logos are supporting evidence, not the whole story.
+2. Minimal over decorative
+- Keep UI chrome light: simple lines, restrained color, minimal component styling.
+- Let writing and ideas carry the experience.
 
 3. Quiet confidence
 - Fewer claims, better claims.
 - No chest-thumping language.
 
 4. Motion with intent
-- Minimal, meaningful animations (entry reveals, subtle hover lift).
-- No decorative motion spam.
+- Default to no motion.
+- Add animation only when it improves comprehension.
 
 ## Copy System
 ### Voice rules
@@ -53,10 +53,9 @@ Build a site that makes strong people think:
 
 ### Home page message hierarchy
 1. Who Madhav is now.
-2. What Madhav is great at.
-3. Proof from selected work.
-4. How Madhav thinks and works.
-5. How to contact.
+2. Curiosities across tech, art, and people.
+3. Brief work context without resume-style self-promotion.
+4. How to contact.
 
 ### Preferred language patterns
 - "I lead..."
@@ -73,21 +72,22 @@ Build a site that makes strong people think:
 ## Information Architecture
 ## Required sections on home
 - Hero (identity + value proposition + CTA)
-- Selected work (3 strong entries max)
-- How I work (operating principles)
-- Context (education/interests, brief)
+- Curiosities (tech, art, people)
+- Work context (brief and factual)
 - Contact
 
 ## Writing section
 - Must contain real posts with useful insight.
 - No placeholder content in production.
 - Post quality target: practical + reflective + concrete.
+- Agent posts should be text-first and markdown-native, with mermaid diagrams when useful.
+- Avoid decorative images in agent posts unless they add unique explanatory value.
 
 ## Visual Direction
 - Tone: warm editorial with precise engineering structure.
 - Palette: light neutral base + restrained blue accent.
 - Typography: expressive serif for headings + modern sans body + mono utility labels.
-- Components: soft radius cards, thin strokes, restrained depth.
+- Components: thin rules, plain lists, and restrained surfaces with almost no visual effects.
 
 ## Accessibility and UX Standards
 1. Preserve contrast and readability.
