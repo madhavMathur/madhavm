@@ -339,7 +339,16 @@ h2 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.1rem;
-  background: var(--surface-strong);
+  background: linear-gradient(160deg, var(--surface), var(--surface-strong));
+}
+
+.blog-lane h2 {
+  margin: 0.35rem 0 0;
+  font-size: 1.7rem;
+}
+
+.blog-lane h2 a {
+  text-decoration: none;
 }
 
 .blog-lane p {
@@ -349,16 +358,15 @@ h2 {
 
 .lane-latest {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .lane-latest a {
-  text-decoration: none;
-  color: var(--accent);
-}
-
-.lane-latest a:hover {
-  text-decoration: underline;
+  text-transform: none;
+  font-size: 0.9rem;
+  margin-left: 0.2rem;
 }
 
 .post-item {
@@ -389,16 +397,16 @@ h2 {
 }
 
 .post-meta {
-  margin: 0;
+  margin: 0 0 0.35rem;
   color: var(--text-muted);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.78rem;
+  font-size: 0.77rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
 /* Markdown post content from Astro's default renderer. */
-.site-main > :where(h1, h2, h3, p, ul, ol, blockquote, pre, hr) {
+.site-main > :where(h1, h2, h3, p, ul, ol, blockquote, pre, hr, table) {
   max-width: 760px;
 }
 
@@ -424,6 +432,33 @@ h2 {
 .site-main > hr {
   border: 0;
   border-top: 1px solid var(--line);
+}
+
+.site-main > p > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+.site-main > table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.site-main > table th,
+.site-main > table td {
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+}
+
+.site-main > table th {
+  background: #f8f3ea;
+  font-weight: 600;
 }
 
 .reveal {
