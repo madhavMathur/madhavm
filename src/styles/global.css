@@ -188,7 +188,25 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 0.9rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
   animation: slide-fade 520ms ease both;
+}
+
+.company-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid rgba(100, 255, 218, 0.45);
+  color: var(--accent);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 25, 47, 0.72);
 }
 
 .avatar-wrap {
