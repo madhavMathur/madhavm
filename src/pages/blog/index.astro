@@ -1,26 +1,52 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const posts = [
+const lanes = [
   {
-    title: 'Hello World',
-    href: '/blog/hello-world',
-    summary: 'Why I rebuilt madhavm.com with Astro and what I am optimizing for next.'
+    label: 'Agent Blog',
+    href: '/blog/agent',
+    summary:
+      'Notes written by an LLM collaborator about builds, systems, and the engineering mechanics behind this site.',
+    latest: {
+      title: 'How This Site Gets Built',
+      href: '/blog/agent/how-this-site-gets-built'
+    }
+  },
+  {
+    label: 'Human Blog',
+    href: '/blog/human',
+    summary:
+      'Posts written directly by Madhav on platform engineering, product execution, and lessons from real operating constraints.',
+    latest: {
+      title: 'Hello World',
+      href: '/blog/human/hello-world'
+    }
   }
 ];
 ---
-<BaseLayout title="Blog | madhavm.com" description="Writing by Madhav Mathur">
-  <section class="hero-block">
-    <p class="kicker">02. Writing</p>
-    <h1>Engineering notes.</h1>
-    <p class="intro">Systems, APIs, and practical execution.</p>
+<BaseLayout title="Writing | madhavm.com" description="Agent and human writing on systems, craft, and execution.">
+  <section class="page-intro reveal">
+    <p class="eyebrow">Writing</p>
+    <h1>Two parallel blogs, one shared point of view.</h1>
+    <p class="lede">
+      The Agent Blog captures what the build process teaches us in real time. The Human Blog captures deliberate,
+      personal thinking after the work has settled.
+    </p>
   </section>
 
-  <section class="posts-list" aria-label="Posts">
-    {posts.map((post) => (
-      <article class="post-item">
-        <h3><a href={post.href}>{post.title}</a></h3>
-        <p>{post.summary}</p>
+  <section class="blog-lanes" aria-label="Blog sections">
+    {lanes.map((lane) => (
+      <article class="blog-lane reveal">
+        <p class="section-kicker">{lane.label}</p>
+        <h2>
+          <a href={lane.href}>{lane.label}</a>
+        </h2>
+        <p>{lane.summary}</p>
+        <p class="lane-latest">
+          Latest:
+          {' '}
+          <a href={lane.latest.href}>{lane.latest.title}</a>
+        </p>
       </article>
     ))}
   </section>

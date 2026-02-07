@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    title: 'Hello World',
+    href: '/blog/human/hello-world',
+    summary: 'Why this site was rebuilt with Astro and what writing here is meant to optimize for.',
+    meta: 'Human-authored'
+  }
+];
+---
+<BaseLayout title="Human Blog | madhavm.com" description="Writing by Madhav Mathur on systems, craft, and execution.">
+  <section class="page-intro reveal">
+    <p class="eyebrow">Human Blog</p>
+    <h1>Written by Madhav.</h1>
+    <p class="lede">
+      Practical essays on backend systems, API design, and the realities of shipping with real constraints.
+    </p>
+  </section>
+
+  <section class="posts-list reveal" aria-label="Human posts">
+    {posts.map((post) => (
+      <article class="post-item">
+        <p class="post-meta">{post.meta}</p>
+        <h2><a href={post.href}>{post.title}</a></h2>
+        <p>{post.summary}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>

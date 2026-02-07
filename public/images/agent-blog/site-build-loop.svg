@@ -1,0 +1,45 @@
+<svg width="1400" height="820" viewBox="0 0 1400 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">madhavm.com build loop</title>
+  <desc id="desc">A flow from vision to editing, verification, deployment, and live checks.</desc>
+  <rect width="1400" height="820" rx="34" fill="#FBF8F1"/>
+  <rect x="54" y="54" width="1292" height="712" rx="28" fill="#FFFFFF" stroke="#D8D0C3" stroke-width="3"/>
+
+  <rect x="122" y="180" width="240" height="122" rx="20" fill="#F5EFE4" stroke="#B7A88A" stroke-width="2"/>
+  <text x="148" y="228" fill="#3B2D1D" font-family="Manrope, sans-serif" font-size="30" font-weight="700">vision.md</text>
+  <text x="148" y="264" fill="#665947" font-family="IBM Plex Mono, monospace" font-size="20">truth + voice rules</text>
+
+  <rect x="430" y="92" width="240" height="122" rx="20" fill="#F5EFE4" stroke="#B7A88A" stroke-width="2"/>
+  <text x="456" y="140" fill="#3B2D1D" font-family="Manrope, sans-serif" font-size="30" font-weight="700">AGENTS.md</text>
+  <text x="456" y="176" fill="#665947" font-family="IBM Plex Mono, monospace" font-size="20">workflow guardrails</text>
+
+  <rect x="430" y="268" width="240" height="122" rx="20" fill="#EAF0FF" stroke="#89A3D8" stroke-width="2"/>
+  <text x="456" y="316" fill="#213A70" font-family="Manrope, sans-serif" font-size="30" font-weight="700">src/ edits</text>
+  <text x="456" y="352" fill="#415E9F" font-family="IBM Plex Mono, monospace" font-size="20">Astro pages + CSS</text>
+
+  <rect x="738" y="268" width="240" height="122" rx="20" fill="#EAF0FF" stroke="#89A3D8" stroke-width="2"/>
+  <text x="764" y="316" fill="#213A70" font-family="Manrope, sans-serif" font-size="30" font-weight="700">verify</text>
+  <text x="764" y="352" fill="#415E9F" font-family="IBM Plex Mono, monospace" font-size="20">check + build</text>
+
+  <rect x="1046" y="268" width="240" height="122" rx="20" fill="#EAF0FF" stroke="#89A3D8" stroke-width="2"/>
+  <text x="1072" y="316" fill="#213A70" font-family="Manrope, sans-serif" font-size="30" font-weight="700">main push</text>
+  <text x="1072" y="352" fill="#415E9F" font-family="IBM Plex Mono, monospace" font-size="20">git integration</text>
+
+  <rect x="738" y="478" width="240" height="122" rx="20" fill="#EDF7F0" stroke="#7FB88F" stroke-width="2"/>
+  <text x="764" y="526" fill="#1D5A2C" font-family="Manrope, sans-serif" font-size="30" font-weight="700">Cloudflare</text>
+  <text x="764" y="562" fill="#3E7E4D" font-family="IBM Plex Mono, monospace" font-size="20">Pages deploy</text>
+
+  <rect x="1046" y="478" width="240" height="122" rx="20" fill="#EDF7F0" stroke="#7FB88F" stroke-width="2"/>
+  <text x="1072" y="526" fill="#1D5A2C" font-family="Manrope, sans-serif" font-size="30" font-weight="700">check:live</text>
+  <text x="1072" y="562" fill="#3E7E4D" font-family="IBM Plex Mono, monospace" font-size="20">smoke routes</text>
+
+  <path d="M362 242H420" stroke="#7F735F" stroke-width="4" stroke-linecap="round"/>
+  <path d="M670 153V153" stroke="#7F735F" stroke-width="4" stroke-linecap="round"/>
+  <path d="M550 214V262" stroke="#7F735F" stroke-width="4" stroke-linecap="round"/>
+  <path d="M670 329H730" stroke="#587BC8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M978 329H1038" stroke="#587BC8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M858 390V470" stroke="#587BC8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M978 539H1038" stroke="#4E9661" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M1160 600C1160 706 420 706 420 329" stroke="#6D8FCA" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 14"/>
+  <text x="852" y="706" fill="#415E9F" font-family="IBM Plex Mono, monospace" font-size="20">feedback loop</text>
+</svg>

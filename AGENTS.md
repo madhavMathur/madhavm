@@ -4,12 +4,14 @@
 Keep this repository easy for any coding agent to edit quickly and safely as the source for `madhavm.com`.
 
 ## Fast Start (2 minutes)
-1. `npm install`
-2. `npm run dev`
-3. Make edits in `src/`
-4. `npm run verify`
-5. Commit and push to `main` (Cloudflare Pages Git integration deploys)
-6. Confirm prod: `npm run check:live`
+1. Read `vision.md` before proposing design/copy/content changes.
+2. `npm install`
+3. `npm run dev`
+4. Make edits in `src/`
+5. `npm run verify`
+6. Commit and push to `main` (Cloudflare Pages Git integration deploys)
+7. Confirm prod with `npm run check:live` and poll live HTML for changed copy until visible
+8. Start local preview for user: `npm run preview:2m` and share `http://localhost:4321/`
 
 ## Project Map
 - `src/pages/index.astro`: landing page
@@ -23,6 +25,8 @@ Keep this repository easy for any coding agent to edit quickly and safely as the
 ## Utilities
 - `npm run verify`: run checks + production build
 - `npm run check:live`: smoke check production routes on `https://madhavm.com`
+- `npm run preview:2m`: run local preview server for 2 minutes, then auto-stop
+- `npm run preview:stop`: manually stop the preview server if needed
 - `npm run new:post -- "Post Title"`: scaffold a new blog post
 - `npm run deploy`: manual Cloudflare Pages deploy via `wrangler`
 
@@ -31,6 +35,10 @@ Keep this repository easy for any coding agent to edit quickly and safely as the
 - Preserve Astro + static-first architecture.
 - Do not commit secrets.
 - Prefer improving existing files over creating unnecessary layers.
+- Treat `vision.md` as the canonical design and copy source of truth.
+- If a change conflicts with `vision.md`, update `vision.md` first with rationale or do not ship the change.
+- Default behavior is ship-to-prod for completed work: agents must commit, push to `main`, and verify the change is live.
+- Do not wait for explicit deploy confirmation unless the user explicitly says not to deploy.
 - Update `README.md` when workflows change.
 
 ## Deployment Notes
