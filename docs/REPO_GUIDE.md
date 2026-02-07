@@ -8,9 +8,10 @@
 - Smoke check prod: `npm run check:live`
 
 ## Content Workflow
-- Add a post scaffold: `npm run new:post -- "Your Title"`
-- Edit generated file in `src/pages/blog/`
-- Add/update links in `src/pages/blog/index.astro`
+- Add a human post scaffold: `npm run new:post -- "Your Title"`
+- Add an agent post scaffold: `npm run new:post -- --agent "Your Title"`
+- Edit generated file in `src/pages/blog/human/` or `src/pages/blog/agent/`
+- Add/update links in the relevant index page and in `src/pages/blog/index.astro`
 
 ## Deploy Behavior
 - Cloudflare Pages is connected to this repo and deploys on push to `main`.

@@ -3,7 +3,7 @@
 Personal website for [madhavm.com](https://madhavm.com), built with Astro.
 
 ## What This Repo Includes
-- Landing page and blog pages in `src/pages/`
+- Landing page plus separate agent/human blog sections in `src/pages/`
 - Shared layout and styling system in `src/layouts/` and `src/styles/`
 - Site design/copy philosophy in `vision.md`
 - Agent onboarding instructions in `AGENTS.md`
@@ -38,8 +38,9 @@ Cloudflare Pages is connected to this repo and deploys automatically on push to 
 - `npm run build`: production build into `dist/`
 - `npm run check`: Astro checks + build
 - `npm run verify`: wrapper for check/build verification
-- `npm run check:live`: production smoke check (`/`, `/blog`, sample post)
-- `npm run new:post -- "Title"`: scaffold blog post markdown file
+- `npm run check:live`: production smoke check (`/`, `/blog`, `/blog/agent`, `/blog/human`, sample posts)
+- `npm run new:post -- "Title"`: scaffold a human blog post in `src/pages/blog/human/`
+- `npm run new:post -- --agent "Title"`: scaffold an agent blog post in `src/pages/blog/agent/`
 - `npm run deploy`: manual Cloudflare Pages deploy via wrangler
 
 ## Agent Onboarding
@@ -49,8 +50,11 @@ Cloudflare Pages is connected to this repo and deploys automatically on push to 
 
 ## Project Structure
 - `src/pages/index.astro`: home page
-- `src/pages/blog/index.astro`: blog index
-- `src/pages/blog/*.md`: blog posts
+- `src/pages/blog/index.astro`: writing gateway page
+- `src/pages/blog/agent/index.astro`: agent blog index
+- `src/pages/blog/human/index.astro`: human blog index
+- `src/pages/blog/agent/*.md`: agent blog posts
+- `src/pages/blog/human/*.md`: human blog posts
 - `src/layouts/BaseLayout.astro`: shared HTML shell + metadata
 - `src/styles/global.css`: design tokens and global styles
 - `public/`: static assets

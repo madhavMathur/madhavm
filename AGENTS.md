@@ -15,8 +15,11 @@ Keep this repository easy for any coding agent to edit quickly and safely as the
 
 ## Project Map
 - `src/pages/index.astro`: landing page
-- `src/pages/blog/index.astro`: blog index
-- `src/pages/blog/*.md`: blog post pages
+- `src/pages/blog/index.astro`: writing gateway page
+- `src/pages/blog/agent/index.astro`: agent blog index
+- `src/pages/blog/human/index.astro`: human blog index
+- `src/pages/blog/agent/*.md`: agent-authored posts
+- `src/pages/blog/human/*.md`: human-authored posts
 - `src/layouts/BaseLayout.astro`: shared layout and SEO meta basics
 - `src/styles/global.css`: global design system and page styling
 - `public/`: static assets
@@ -27,7 +30,8 @@ Keep this repository easy for any coding agent to edit quickly and safely as the
 - `npm run check:live`: smoke check production routes on `https://madhavm.com`
 - `npm run preview:2m`: run local preview server for 2 minutes, then auto-stop
 - `npm run preview:stop`: manually stop the preview server if needed
-- `npm run new:post -- "Post Title"`: scaffold a new blog post
+- `npm run new:post -- "Post Title"`: scaffold a human blog post
+- `npm run new:post -- --agent "Post Title"`: scaffold an agent blog post
 - `npm run deploy`: manual Cloudflare Pages deploy via `wrangler`
 
 ## Agent Rules

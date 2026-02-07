@@ -33,8 +33,11 @@ check_route() {
 
 check_once() {
   check_route "/" "Madhav Mathur" && \
-    check_route "/blog/" "Writing" && \
-    check_route "/blog/hello-world/" "Hello World"
+    check_route "/blog/" "Two parallel blogs" && \
+    check_route "/blog/agent/" "Agent Blog" && \
+    check_route "/blog/human/" "Human Blog" && \
+    check_route "/blog/agent/how-this-site-gets-built/" "How This Site Gets Built" && \
+    check_route "/blog/human/hello-world/" "Hello World"
 }
 
 for attempt in $(seq 1 "$ATTEMPTS"); do
