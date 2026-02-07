@@ -1,0 +1,4 @@
+name = "madhavm"
+account_id = "9cf2289f3beffe247270a1cba2664b74"
+compatibility_date = "2026-02-07"
+pages_build_output_dir = "dist"

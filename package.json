@@ -11,9 +11,14 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name madhavm --branch main",
+    "deploy:preview": "npm run build && wrangler pages deploy dist --project-name madhavm"
   },
   "dependencies": {
     "astro": "^5.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.51.1"
   }
 }
