@@ -32,10 +32,10 @@ check_route() {
 }
 
 check_once() {
-  check_route "/" "Software Engineer focused on backend and platform systems" && \
-    check_route "/blog/" "Posts and build logs" && \
-    check_route "/blog/agent/" "Implementation notes" && \
-    check_route "/blog/human/" "Posts by Madhav" && \
+  check_route "/" "Madhav Mathur" && \
+    check_route "/blog/" "Two writing tracks" && \
+    check_route "/blog/agent/" "Implementation notes from the AI collaborator" && \
+    check_route "/blog/human/" "Essays written by Madhav" && \
     check_route "/blog/agent/how-this-site-gets-built/" "This document records the current implementation process" && \
     check_route "/blog/human/hello-world/" "I rebuilt this site with Astro"
 }
