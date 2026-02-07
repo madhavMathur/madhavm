@@ -5,19 +5,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Madhav Mathur | madhavm.com"
   description="Tech Lead writing about systems, platform APIs, and software craft."
 >
-  <section class="hero-block">
-    <p class="kicker">Hi, my name is</p>
-    <h1>Madhav Mathur.</h1>
-    <h2>I build reliable software products.</h2>
-    <p class="intro">
-      I am a Tech Lead for the API Platform and Integrations teams at TheGuarantors in New York.
-      I write about designing backend systems, scaling platform APIs, and shipping practical product improvements.
-    </p>
-    <div class="hero-actions">
-      <a class="pill" href="/blog">Read writing</a>
-      <a class="text-link" href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="text-link" href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
+  <section class="hero-top">
+    <section class="hero-block">
+      <p class="kicker">Hi, my name is</p>
+      <h1>Madhav Mathur.</h1>
+      <h2>I build reliable software products.</h2>
+      <p class="intro">
+        I am a Tech Lead for the API Platform and Integrations teams at TheGuarantors in New York.
+        I write about designing backend systems, scaling platform APIs, and shipping practical product improvements.
+      </p>
+      <p class="nyc-splash">Based in NYC, inspired by late-night skylines and high-agency teams.</p>
+      <div class="hero-actions">
+        <a class="pill" href="/blog">Read writing</a>
+        <a class="text-link" href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="text-link" href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <figure class="avatar-wrap hero-avatar" aria-label="Portrait">
+      <img class="avatar" src="/images/profile.jpg" alt="Portrait of Madhav Mathur" loading="eager" decoding="async" />
+    </figure>
   </section>
 
   <section class="proof-grid" aria-label="Where I have worked">
@@ -45,10 +52,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <section class="meta-row">
-    <figure class="avatar-wrap" aria-label="Portrait">
-      <img class="avatar" src="/images/profile.jpg" alt="Portrait of Madhav Mathur" loading="eager" decoding="async" />
-    </figure>
-
     <div class="meta-card" id="contact">
       <p class="meta-title">Contact</p>
       <p class="meta-copy">Want to collaborate or chat engineering? Send me a note.</p>

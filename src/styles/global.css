@@ -23,9 +23,36 @@ body {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 80% -10%, rgba(100, 255, 218, 0.07), transparent 30%), var(--bg);
+  background:
+    radial-gradient(circle at 78% -8%, rgba(255, 119, 61, 0.17), transparent 34%),
+    radial-gradient(circle at 20% 0%, rgba(100, 255, 218, 0.08), transparent 30%),
+    linear-gradient(180deg, #0b1e3a 0%, #0a192f 50%, #081423 100%);
   color: var(--text);
   line-height: 1.65;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24vh;
+  pointer-events: none;
+  opacity: 0.35;
+  background:
+    linear-gradient(to top, rgba(8, 20, 35, 0.95), rgba(8, 20, 35, 0)),
+    repeating-linear-gradient(
+      to right,
+      rgba(15, 35, 58, 0.9) 0 14px,
+      rgba(11, 27, 45, 0.95) 14px 28px,
+      rgba(18, 42, 68, 0.88) 28px 42px,
+      rgba(9, 22, 38, 0.96) 42px 56px
+    );
+  mask-image: linear-gradient(to top, black 55%, transparent);
+  z-index: -1;
 }
 
 .site-header {
@@ -88,6 +115,13 @@ body {
   padding: 2.8rem 0 4rem;
 }
 
+.hero-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+}
+
 .hero-block {
   max-width: 840px;
   animation: slide-fade 520ms ease both;
@@ -130,6 +164,13 @@ h2 {
   font-size: 1.02rem;
 }
 
+.nyc-splash {
+  margin-top: 0.7rem;
+  color: #9eb3d8;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.82rem;
+}
+
 .hero-actions {
   margin-top: 1.5rem;
   display: flex;
@@ -169,10 +210,10 @@ h2 {
 }
 
 .meta-row {
-  margin-top: 2.3rem;
+  margin-top: 1.1rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
 }
 
@@ -218,6 +259,10 @@ h2 {
   padding: 6px;
   background: rgba(17, 34, 64, 0.45);
   animation: float-soft 4.8s ease-in-out infinite;
+}
+
+.hero-avatar {
+  margin-top: 0.3rem;
 }
 
 .avatar {
@@ -324,7 +369,7 @@ a {
     padding-bottom: 0.2rem;
   }
 
-  .meta-row {
+  .hero-top {
     grid-template-columns: 1fr;
   }
 
@@ -335,5 +380,10 @@ a {
   .avatar-wrap {
     width: 126px;
     height: 126px;
+  }
+
+  .hero-avatar {
+    order: -1;
+    margin-bottom: 0.4rem;
   }
 }
