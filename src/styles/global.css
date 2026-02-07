@@ -298,6 +298,15 @@ h2 {
   font-size: 0.84rem;
 }
 
+.site-main > pre.astro-code {
+  background: var(--paper) !important;
+  color: var(--text) !important;
+}
+
+.site-main > pre.astro-code span {
+  color: var(--text) !important;
+}
+
 .site-main > table {
   border-collapse: collapse;
   width: 100%;
