@@ -32,7 +32,7 @@ check_route() {
 }
 
 check_once() {
-  check_route "/" "Tech Lead working on API platform and integration systems" && \
+  check_route "/" "Software Engineer focused on backend and platform systems" && \
     check_route "/blog/" "Posts and build logs" && \
     check_route "/blog/agent/" "Implementation notes" && \
     check_route "/blog/human/" "Posts by Madhav" && \
