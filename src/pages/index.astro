@@ -3,85 +3,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="Madhav Mathur | madhavm.com"
-  description="Software Engineer. Writing about software, systems, and practical execution."
+  description="Software Engineer. Writing about systems, software, and practical execution."
 >
-  <section class="home-hero">
-    <p class="kicker">Madhav Mathur</p>
-    <h1>Software Engineer</h1>
-    <p class="intro">
-      I build practical software and write about what I learn along the way.
-      This site is focused on writing, build notes, and engineering lessons from real work.
-    </p>
-    <div class="inline-links" aria-label="Primary links">
-      <a href="/blog">Blog</a>
-      <a href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
-  </section>
-
-  <section class="home-block" aria-label="Writing">
-    <h2>Writing</h2>
-    <p>Start with the latest post:</p>
-    <p><a href="/blog/hello-world">Hello World</a></p>
-  </section>
-
-  <section class="home-block" id="contact" aria-label="Contact">
-    <h2>Contact</h2>
-    <p>Send a message directly from this form. It opens your email client.</p>
-
-    <form id="contact-form" class="contact-form">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" required />
-
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Open email draft</button>
-      <p class="fine-print">
-        The draft includes basic context like page URL, referrer, browser, timezone, and timestamp.
+  <section class="hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Madhav Mathur</p>
+      <h1>Software Engineer</h1>
+      <p class="intro">
+        I write about building software with clarity, speed, and taste.
+        Expect practical notes on systems, product decisions, and execution.
       </p>
-    </form>
+      <div class="inline-links" aria-label="Primary links">
+        <a href="/blog">Read the blog</a>
+        <a href="https://github.com/madhavMathur" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mathurmadhav/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <figure class="hero-portrait-wrap">
+      <img
+        class="hero-portrait"
+        src="/images/profile.jpg"
+        alt="Portrait of Madhav Mathur"
+        loading="eager"
+        decoding="async"
+      />
+    </figure>
+  </section>
+
+  <section class="split-row" aria-label="Writing and contact">
+    <article class="panel">
+      <p class="kicker">Writing</p>
+      <h2>Latest</h2>
+      <p class="panel-copy">Start here:</p>
+      <p><a href="/blog/hello-world">Hello World</a></p>
+    </article>
+
+    <article class="panel" id="contact">
+      <p class="kicker">Contact</p>
+      <h2>Say Hello</h2>
+      <p class="panel-copy">Short note, quick reply.</p>
+      <a id="contact-mailto" class="cta" href="mailto:madhavmathur@outlook.com?subject=Website%20inquiry%20from%20madhavm.com">
+        Email me
+      </a>
+    </article>
   </section>
 </BaseLayout>
 
 <script>
-  const form = document.getElementById('contact-form');
+  const contactLink = document.getElementById('contact-mailto');
 
-  if (form instanceof HTMLFormElement) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
+  if (contactLink instanceof HTMLAnchorElement) {
+    const source = window.location.href;
+    const referrer = document.referrer || 'direct';
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'unknown';
+    const timestamp = new Date().toISOString();
 
-      const data = new FormData(form);
-      const name = (data.get('name') ?? '').toString().trim();
-      const email = (data.get('email') ?? '').toString().trim();
-      const message = (data.get('message') ?? '').toString().trim();
+    const subject = 'Website inquiry from madhavm.com';
+    const body = [
+      'Hi Madhav,',
+      '',
+      'I found you through your website and wanted to reach out.',
+      '',
+      '--- Context ---',
+      `Source URL: ${source}`,
+      `Referrer: ${referrer}`,
+      `Timezone: ${timezone}`,
+      `Timestamp: ${timestamp}`,
+    ].join('\\n');
 
-      const subject = `[madhavm.com] Website inquiry from ${name || 'visitor'}`;
-      const metadata = [
-        `Source URL: ${window.location.href}`,
-        `Referrer: ${document.referrer || 'direct'}`,
-        `Browser: ${navigator.userAgent}`,
-        `Timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone || 'unknown'}`,
-        `Language: ${navigator.language || 'unknown'}`,
-        `Screen: ${window.screen.width}x${window.screen.height}`,
-        `Timestamp: ${new Date().toISOString()}`,
-      ];
-
-      const body = [
-        `Name: ${name || 'Not provided'}`,
-        `Email: ${email || 'Not provided'}`,
-        '',
-        message,
-        '',
-        '--- Context ---',
-        ...metadata,
-      ].join('\n');
-
-      const mailto = `mailto:madhavmathur@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-    });
+    contactLink.href = `mailto:madhavmathur@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 </script>

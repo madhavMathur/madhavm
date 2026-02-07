@@ -5,20 +5,20 @@ const posts = [
   {
     title: 'Hello World',
     href: '/blog/hello-world',
-    summary: 'The first post on the new version of madhavm.com.'
+    summary: 'Why I rebuilt madhavm.com with Astro and what I am optimizing for next.'
   }
 ];
 ---
 <BaseLayout title="Blog | madhavm.com" description="Writing by Madhav Mathur">
-  <section class="home-hero">
+  <section class="blog-hero">
     <p class="kicker">Blog</p>
-    <h1>Writing</h1>
-    <p class="intro">Notes on software engineering, systems, and what I am learning in public.</p>
+    <h1>Writing in Public</h1>
+    <p class="intro">Engineering notes, execution lessons, and system design thoughts.</p>
   </section>
 
-  <section class="home-block" aria-label="Post list">
+  <section class="posts" aria-label="Posts">
     {posts.map((post) => (
-      <article class="post-item">
+      <article class="post-row">
         <h2><a href={post.href}>{post.title}</a></h2>
         <p>{post.summary}</p>
       </article>
