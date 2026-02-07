@@ -137,17 +137,19 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 11 / 4;
-  object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
 
 .hero-main {
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
+  grid-template-columns: 86px minmax(0, 1fr);
   gap: 1rem;
   align-items: start;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(21, 25, 34, 0.36);
 }
 
 .profile-photo {
@@ -181,6 +183,10 @@ h2 {
   border-top: 1px solid var(--line);
 }
 
+.section h2 {
+  margin-bottom: 0.25rem;
+}
+
 .facts-list {
   margin: 0.8rem 0 0;
   padding-left: 1.1rem;
@@ -188,6 +194,35 @@ h2 {
 
 .facts-list li + li {
   margin-top: 0.45rem;
+}
+
+.detail-list {
+  margin: 0.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.detail-list li {
+  display: grid;
+  grid-template-columns: minmax(170px, 230px) minmax(0, 1fr);
+  gap: 0.9rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+
+.detail-title,
+.detail-copy {
+  margin: 0;
+}
+
+.detail-title {
+  font-weight: 600;
+}
+
+.detail-copy {
+  color: var(--muted);
 }
 
 .page-intro {
@@ -310,7 +345,12 @@ h2 {
   }
 
   .profile-photo {
-    width: min(120px, 100%);
+    width: min(86px, 100%);
+  }
+
+  .detail-list li {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 }
 
