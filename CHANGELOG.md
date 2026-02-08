@@ -11,7 +11,8 @@ Findings:
 - Live smoke checks could not reach `madhavm.com` due to DNS restrictions in this environment.
 
 Fixes applied:
-- None.
+- Added maintenance runbook entries for live-check DNS failures, missing `astro`, Node engine warnings, and `git push` DNS failures.
 
 Remaining risks:
 - Production smoke check not validated from this environment; should be re-run from a networked shell.
+- Changes not pushed to `main` due to DNS resolution failure for GitHub.
