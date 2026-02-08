@@ -38,3 +38,15 @@ Likely root causes:
 Fastest fix steps:
 1. Use `nvm install 20.19.0` (or newer) and `nvm use 20.19.0`.
 2. Re-run `npm install` and checks.
+
+## `git push` fails with \"Could not resolve host\"
+
+Symptoms:
+- `git push` returns `Could not resolve host: github.com`.
+
+Likely root causes:
+- DNS resolution or network access is blocked in the execution environment.
+
+Fastest fix steps:
+1. Retry `git push` from a networked local shell.
+2. If still failing, confirm DNS settings and network access to GitHub.
