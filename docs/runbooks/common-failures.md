@@ -14,6 +14,7 @@ Fastest fix steps:
 1. Re-run `npm run check:live` from a networked local shell (not a restricted sandbox).
 2. If it fails locally, verify DNS for `madhavm.com` and Cloudflare Pages status.
 3. Once resolved, re-run `npm run check:live` and record results in the changelog.
+4. If the failure is due to a known restricted environment, log the blocker in the changelog and skip repeat retries until a networked shell is available.
 
 ## `astro: command not found` during `npm run verify`
 
