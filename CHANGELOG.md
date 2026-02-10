@@ -5,6 +5,7 @@
 Checks run:
 - `npm run verify` (passed; required `npm install` in worktree)
 - `npm run check:live` (failed: DNS resolution blocked in environment)
+- Post-fix re-run: `npm run verify` (passed) and `npm run check:live` (failed: DNS resolution blocked in environment)
 
 Findings:
 - No content or UX regressions found in homepage, blog index, agent blog, human blog, or contact flow.
