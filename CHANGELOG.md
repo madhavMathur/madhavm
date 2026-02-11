@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-02-11
+
+Checks run:
+- `npm run verify` (passed)
+- `npm run check:live` (failed: DNS resolution blocked in environment)
+
+Findings:
+- No content or UX regressions found in homepage, blog index, agent blog, human blog, or contact flow.
+- Live smoke checks could not reach `madhavm.com` due to DNS restrictions in this environment.
+
+Fixes applied:
+- Added a runbook reminder that repeated DNS blocks in sandboxed shells are expected and should be logged once per run.
+
+Remaining risks:
+- Production smoke check not validated from this environment; should be re-run from a networked shell.
+
 ## 2026-02-10
 
 Checks run:
