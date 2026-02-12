@@ -41,6 +41,7 @@ Likely root causes:
 Fastest fix steps:
 1. Use `nvm install 20.19.0` (or newer) and `nvm use 20.19.0`.
 2. Re-run `npm install` and checks.
+3. If the warnings persist but `npm run verify` succeeds, log the warning and proceed.
 
 ## `git push` fails with \"Could not resolve host\"
 
