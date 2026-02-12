@@ -16,6 +16,7 @@ Fixes applied:
 
 Remaining risks:
 - Production smoke check not validated from this environment; should be re-run from a networked shell.
+- Changes not pushed to `main` due to DNS resolution failure for GitHub.
 
 ## 2026-02-11
 
