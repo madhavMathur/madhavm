@@ -9,6 +9,7 @@ Symptoms:
 
 Likely root causes:
 - Network access or DNS resolution is blocked in the execution environment.
+- Known recurring constraint: Codex automation sandboxes can block DNS for external domains.
 
 Fastest fix steps:
 1. Re-run `npm run check:live` from a networked local shell (not a restricted sandbox).

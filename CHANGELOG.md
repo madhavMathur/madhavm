@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-02-14
+
+Checks run:
+- `npm install` (warned about unsupported engine + moderate vulnerabilities)
+- `npm run verify` (passed)
+- `npm run check:live` (failed: DNS resolution blocked in environment)
+
+Findings:
+- No content or UX regressions found in homepage, blog index, agent blog, human blog, or contact flow.
+- Live smoke checks could not reach `madhavm.com` due to DNS restrictions in this environment.
+- `npm install` reported `EBADENGINE` warnings with Node 20.11.1 and 5 moderate severity vulnerabilities.
+
+Fixes applied:
+- Updated runbook to note recurring DNS blocks in Codex automation sandboxes.
+
+Remaining risks:
+- Production smoke check not validated from this environment; should be re-run from a networked shell.
+
 ## 2026-02-13
 
 Checks run:
