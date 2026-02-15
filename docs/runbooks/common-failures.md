@@ -44,6 +44,20 @@ Fastest fix steps:
 2. Re-run `npm install` and checks.
 3. If the warnings persist but `npm run verify` succeeds, log the warning and proceed.
 
+## npm audit reports moderate vulnerabilities
+
+Symptoms:
+- `npm install` or `npm audit` reports moderate severity vulnerabilities.
+
+Likely root causes:
+- Transitive dependency advisories that do not always have a low-risk patch.
+
+Fastest fix steps:
+1. Run `npm audit` to review details and impacted packages.
+2. If a non-breaking update is available, run `npm audit fix` and re-run `npm run verify`.
+3. If only breaking updates are offered, log the advisory in the changelog and schedule a dependency upgrade later.
+4. If the site builds cleanly, proceed but track the open vulnerability count.
+
 ## `git push` fails with \"Could not resolve host\"
 
 Symptoms:
