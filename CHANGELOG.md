@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-02-16
+
+Checks run:
+- `/Users/madhav/.codex/worktrees/4c85/madhavm`: `npm install` (warned about unsupported engine + 5 moderate vulnerabilities)
+- `/Users/madhav/.codex/worktrees/4c85/madhavm`: `npm run verify` (passed after install)
+- `/Users/madhav/.codex/worktrees/4c85/madhavm`: `npm run check:live` (failed: DNS resolution blocked in environment)
+
+Findings:
+- No content or UX regressions found in homepage, blog index, agent blog, human blog, or contact flow.
+- Live smoke checks could not reach `madhavm.com` due to DNS restrictions in this environment.
+- `npm install` reported `EBADENGINE` warnings with Node 20.11.1 and 5 moderate severity vulnerabilities.
+
+Fixes applied:
+- No repo fixes required.
+
+Remaining risks:
+- Production smoke check not validated from this environment; should be re-run from a networked shell.
+- Moderate vulnerabilities remain until dependency upgrades are applied.
+
 ## 2026-02-15
 
 Checks run:
