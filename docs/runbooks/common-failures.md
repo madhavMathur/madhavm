@@ -6,6 +6,7 @@ This runbook captures issues seen during automated maintenance runs and the fast
 
 Symptoms:
 - `npm run check:live` retries and returns HTTP 000 with `curl: (6) Could not resolve host: madhavm.com`.
+- Current script behavior: retries 12 times with ~10s delays, so failures take ~2 minutes before exit.
 
 Likely root causes:
 - Network access or DNS resolution is blocked in the execution environment.
