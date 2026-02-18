@@ -59,6 +59,9 @@ Fastest fix steps:
 3. If only breaking updates are offered, log the advisory in the changelog and schedule a dependency upgrade later.
 4. If the site builds cleanly, proceed but track the open vulnerability count.
 
+Current baseline:
+- As of 2026-02-18, `npm install` reports 6 moderate vulnerabilities in this repo. Treat this as the baseline unless the count changes.
+
 ## `git push` fails with \"Could not resolve host\"
 
 Symptoms:
